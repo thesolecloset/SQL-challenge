@@ -1,0 +1,34 @@
+Departments
+-
+Dept_no VarChar
+Dept_name VarChar
+
+Dept_Emp
+-
+Emp_No Int FK >- Salaries.Emp_No
+Dept_No VarChar FK >- Departments.Dept_no
+
+Dept_Manager
+-
+Dept_No VarChar FK >- Departments.Dept_no
+Emp_No Int FK >- Dept_Emp.Emp_No
+
+Employees
+-
+Emp_No Int FK >- Dept_Emp.Emp_No
+Emp_Title_Id VarChar
+Birth_date Date
+First_Name VarCHar
+Last_Name VarCHar
+Sex VarCHar
+Hire_Date Date
+
+Salaries
+-
+Emp_No Int
+Salary Int
+
+Titles
+-
+Title_ID VarCHar FK >- Employees.Emp_Title_Id
+Title VarCHar
